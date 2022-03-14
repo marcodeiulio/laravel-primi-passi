@@ -11,7 +11,7 @@
 <body>
 	<header>
 		<nav>
-			<a href="/">Home</a>
+			<a href="{{ route('home') }}">Home</a>
 		</nav>
 	</header>
 	<h1>Laravel seems to be quite a nice framework!</h1>
