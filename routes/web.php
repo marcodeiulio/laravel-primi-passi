@@ -13,6 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
-});
+
+    $data = [
+        'menu_items' => [
+            'home' => [
+                'name' => 'Home',
+                'href' => ''
+            ],
+            'beautiful-framework' => [
+                'name' => 'Beautiful Framework',
+                'href' => 'beautiful-framework'
+            ]
+        ]
+    ];
+
+    return view('home', $data);
+})->name('home');
+
+Route::get('beautiful-framework', function () {
+    return view('beautiful-framework');
+})->name('beautiful framework');
